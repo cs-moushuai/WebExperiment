@@ -84,6 +84,12 @@ internal class Program
         Console.WriteLine("数据结构分数表");
         Console.WriteLine("最大值：" + cac.GetMax());
         Console.WriteLine("最小值：" + cac.GetMin());
-        Console.WriteLine("平均值：" + cac.GetAverage());
+        Console.WriteLine("平均值：" + cac.GetAverage() + "\n");
+
+        // 额外的栈题目
+        Console.WriteLine("模拟栈");
+        StackTp st = new StackTp();
+        st.Push(6);
+        Console.WriteLine(st.Top());
     }
 }
