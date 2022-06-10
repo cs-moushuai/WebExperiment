@@ -71,8 +71,9 @@ internal class Program
         string sqlQuery = "SELECT stu_Score FROM Score, Subjects WHERE subName=\"数据结构\" and Subjects.subID=Score.sub_ID;";
         MySqlDataAdapter adr = new MySqlDataAdapter(sqlQuery, conn);
         // adr.SelectCommand.CommandType = CommandType.Text;
-        DataTable dt = new DataTable();
-        adr.Fill(dt);
+        DataSet ds = new DataSet();
+        adr.Fill(ds);
+        DataTable dt = ds.Tables[0];
         conn.Close();
 
         double[] score = new double[dt.Rows.Count];
